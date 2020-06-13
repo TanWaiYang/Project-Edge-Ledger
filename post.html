@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <title>Edge Water | Blog Post</title>
+</head>
+
+<body id="home">
+  <header class="hero-blog">
+
+    <div class="navbar top" id="navbar">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span> Water
+      </h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+
+  </header>
+
+  <main>
+   <div class="main-container">
+     <div class="main-heading">
+    <h1>Blog Post One</h1>
+    <p><i class="fa fa-user" aria-hidden="true"></i> Posted by John Doe | April 23 2020</p>
+    </div>
+    <div class="blog-img">
+    <img src="img/blog/blog1.jpg" alt="">
+    </div>
+    <div class="blog-paragraph">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, voluptatum?</p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio fugit odit qui, libero 
+      aspernatur corporis hic laudantium possimus! Accusantium ut nihil sit numquam, optio 
+      reprehenderit corporis libero dolorum quod minus ea explicabo, ratione, quo voluptates 
+      amet quibusdam. Impedit libero a quas neque esse consequatur non error voluptate excepturi
+       accusantium in iste, doloremque tempore quo voluptates voluptatum ex officia officiis optio!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio fugit odit qui, libero 
+      aspernatur corporis hic laudantium possimus! Accusantium ut nihil sit numquam, optio 
+      reprehenderit corporis libero dolorum quod minus ea explicabo, ratione, quo voluptates 
+      amet quibusdam. Impedit libero a quas neque esse consequatur non error voluptate excepturi
+    </p>
+   </div>
+  </div>
+
+  </main>
+
+  <footer class="footer bg-dark">
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p>Copyright &copy; 2020 Created By Tan Wai Yang</p>
+
+  </footer>
+
+  
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if(window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if(!scrolled) {
+          navbar.style.transform = 'translateY(-70px)'
+        }
+        setTimeout(function() {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+/* Basic CSS Setup */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  box-sizing : border-box;
+  margin : 0;
+  padding : 0;
+}
+
+body {
+  font-family : 'Open Sans', sans-serif;
+  background : #fff;
+  color : #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style : none;
+}
+
+a {
+  color : #333;
+  text-decoration : none;
+}
+
+h1, h2 {
+  font-weight : 300;
+  line-height : 1.2;
+}
+
+p {
+  margin : 10px 0;
+}
+
+img {
+  width : 100%;
+}
+
+/* Navbar */
+.navbar {
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+  background-color : #333;
+  color : #fff;
+  opacity: 0.8;
+  width : 100%;
+  height : 70px;
+  position : fixed;
+  top: 0px;
+  padding : 0 30px;
+  transition : 0.5s;
+}
+
+.navbar.top {
+  background : transparent;
+}
+
+.navbar a {
+  color : #fff;
+  padding : 10px 20px;
+  margin : 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom : #28a745 2px solid;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar .logo {
+  font-weight : 400;
+}
+
+/* Header */
+.hero {
+  background : url('../img/home/showcase.jpg') no-repeat center center/cover;
+  height : 100vh;
+  /* for overlay */
+  position : relative;
+  color : #fff;
+}
+
+.hero.blog{
+  height : 30vh;
+  background : url(../img/blog/blog1.jpg) no-repeat center center/cover;
+}
+
+.content {
+  display: flex;
+  flex-direction : column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height : 100%;
+  padding : 0 20px;
+}
+
+.content h1 {
+  font-size : 55px;
+}
+
+.content p {
+  font-size : 23px;
+  max-width : 600px;
+  margin : 20px 0 20px;
+}
+
+/* Black Overlay */
+.hero::before {
+  content: '';
+  position : absolute;
+  top : 0;
+  left : 0;
+  width : 100%;
+  height : 100%;
+  background : rgba(0,0,0,0.6)
+}
+
+.hero * {
+  z-index: 1;
+}
+
+/* Icons */
+.icons {
+  padding : 30px;
+}
+
+.icons h3 {
+  font-weight : bold;
+  margin-bottom : 15px;
+}
+
+.icons i {
+  background-color : #28a745;
+  color : #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom : 15px;
+}
+
+/* Flex Items */
+.flex-items {
+  display : flex;
+  text-align: center;
+  align-items : center;
+  justify-content: space-around;
+  height : 100%;
+}
+
+.flex-items div {
+  padding : 20px;
+}
+
+/* About Info */
+.flex-columns .row {
+  display : flex;
+}
+
+.flex-columns .row .column {
+  display : flex;
+  flex-direction: column;
+  width : 50%;
+  /* To take 100% height */
+  flex-basis : 100%;
+  flex : 1;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height : 100%;
+}
+
+/* To make the image can takes up 100% width and height of the class row */
+.flex-columns .column-1 img {
+  height : 100%;
+  width : 100%;
+  /* Works similar like background-size : cover */
+  object-fit : cover;
+}
+
+.flex-columns .column-2 {
+  display : flex;
+  flex-direction : column;
+  align-items : flex-start;
+  justify-content : center;
+  padding : 30px;
+}
+
+.flex-columns .column-2 h2 {
+  font-weight : 100;
+  font-size : 40px;
+}
+
+.flex-columns .column-2 h4 {
+  margin-bottom : 10px;
+}
+
+.flex-columns .column-2 p {
+  margin-bottom : 10px;
+}
+
+.flex-columns .column-2 .btn-outline {
+  background : none;
+  border : 1px solid #fff;
+  border-radius : 5px;
+}
+
+/* Image Gallery */
+
+.cases img {
+  padding-top : 5px;
+}
+
+.cases img:hover {
+  opacity : 0.7
+}
+
+.cases a img {
+  height : 1000px;
+}
+
+/* Professional Team */
+#pro-team {
+  padding : 30px;
+}
+
+#pro-team header {
+  display : flex;
+  flex-direction : column;
+  align-items: center;
+  justify-content: center;
+  padding : 20px 0px;
+}
+
+#pro-team header h4 {
+  margin-bottom : 15px;
+}
+
+#pro-team header h2 {
+  font-size : 40px;
+  font-weight : 100;
+  margin-bottom : 15px;
+}
+
+#pro-team header p {
+  font-size : 18px;
+}
+
+#pro-team .another-container {
+  display : flex;
+  flex-direction : row;
+  align-items: center;
+  justify-content: center;
+}
+
+#pro-team .another-container img {
+  border-radius: 30%;
+  padding : 0px 20px;
+}
+
+#pro-team .flex-box {
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  justify-content: center;
+  line-height : 2.0rem;
+}
+
+/* Contact */
+/* Very important to make the height same for both column */
+#contact .row .column {
+  width : 50%;
+  flex : 1;
+  flex-basis: 100%;
+}
+
+#contact .row {
+  display : flex;
+}
+
+#contact .column .column-1 {
+  height : 100%;
+}
+
+#contact .column-2 {
+  display : flex;
+  flex-direction : column;
+  align-items: flex-start;
+  justify-content : center;
+  height : 100%;
+  width : 100%;
+  padding : 50px 5px;
+}
+
+#contact .column-2 h2 {
+  font-size : 35px;
+  font-weight: 100;
+  margin-bottom : 15px;
+  padding-left : 15px;
+}
+
+#contact .column-2 form {
+  width : 100%;
+  padding : 20px 15px;
+}
+
+#contact .column-2 input {
+  display : block;
+  width : 100%;
+  margin-bottom : 25px;
+  border : 1px solid #f4f4f4;
+  padding : 4px;
+  height : 35px;
+}
+
+#contact .column-2 button {
+  width : 100%;
+  background-color : #28a745;
+  border : none;
+  margin-top : 20px;
+  height : 40px;
+  color : #fff;
+}
+
+#contact .column-2 input:focus {
+  outline-color : #28a745;
+}
+
+#contact .column .column-1 img{
+  height : 100%;
+  width : 100%;
+  object-fit : cover;
+}
+  
+/* Footer */
+.footer {
+  display : flex;
+  flex-direction : column;
+  align-items: center;
+  justify-content: center;
+  padding : 20px 0px;
+}
+
+.footer a {
+  font-size : 1.7rem;
+  color : #fff;
+  margin-right : 10px;
+}
+
+.footer a:hover {
+  color : #28a745;
+}
+
+/* Mobile Responsive Design */
+@media(max-width : 768px) {
+  .navbar {
+    flex-direction: column;
+    height : 120px;
+    padding : 20px 0px;
+  }
+
+  .navbar a{
+    padding : 10px 10px;
+    margin : 0px 3px;
+  }
+
+  .flex-items {
+    flex-direction : column;
+  }
+
+  .flex-grid .column, .row {
+    flex-direction: column;
+  }
+
+  .flex-columns .row .column,
+  #contact .row .column{
+    width : 100%;
+  }
+
+  #pro-team header {
+    text-align: center;
+  }
+ 
+  #pro-team .another-container {
+    flex-direction : column;
+  }
+
+  #pro-team .another-container .flex-box {
+    width : 70%;
+  }
+
+  .blog .btn-outline {
+    font-size : 14px;
+  }
+
+}
+
+/* Blog Page */
+.hero-blog {
+  height : 30vh;
+  background : url(../img/home/blog.jpg) no-repeat center center/cover;
+  position : relative;
+}
+
+.hero-blog::before {
+  content : "";
+  height : 100%;
+  width : 100%;
+  top : 0px;
+  left : 0px;
+  position : absolute;
+  background-color : rgba(0,0,0,0.6);
+}
+
+.hero-blog * {
+  z-index : 1;
+}
+
+.hero-blog .content h1 {
+  color : #fff;
+}
+
+.row-horizon {
+  display : flex;
+}
+
+.row-horizon .column-vertical-1,
+.row-horizon .column-vertical-2 { 
+  width : 50%;
+}
+
+ .column-vertical-1 img {
+  height : 100%;
+  width : 100%;
+  object-fit : cover;
+}
+
+.row-horizon .column-vertical-2 {
+  padding : 50px;
+  display : flex;
+  flex-direction : column;
+  align-items: flex-start;
+  justify-content : center;
+  
+}
+
+.reverse-row {
+  display : flex;
+  flex-direction : row-reverse;
+  height : 500px;
+}
+
+.reverse-column-vertical-2 {
+  width : 50%;
+  height : 100%;
+}
+
+.reverse-column-vertical-1 {
+  width : 50%;
+  height : 100%;
+}
+
+.reverse-row .reverse-column-vertical-2 {
+  padding : 50px;
+  height : 100%;
+  display : flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.reverse-row .reverse-column-vertical-1 img {
+  height : 100%;
+  width : 100%;
+  object-fit : cover;
+}
+
+.read-button {
+  border : 1px solid #333;
+  background-none;
+  padding : 10px 30px;
+  border-radius: 5px;
+}
+
+.read-button:hover {
+  opacity : 0.7;
+}
+
+.btn-light {
+  background : #f4f4f4; 
+}
+
+/* Media Queries Part 2 */
+@media(max-width : 768px){
+  .row-horizon {
+    flex-direction : column;
+  }
+
+  .row-horizon .column-vertical-1, 
+  .row-horizon .column-vertical-2 {
+    width : 100%;
+  }
+
+  .reverse-row {
+    flex-direction : column;
+    height : 100%;
+  }
+
+  .reverse-row .reverse-column-vertical-1,
+  .reverse-row .reverse-column-vertical-2 {
+    width : 100%;
+  }
+
+  .content h1 {
+    margin-top : 80px;
+  }
+}
+
+/* Post Blog Page */
+.main-container h1 {
+  border-bottom : 1px solid #333;
+  padding : 15px 0;
+}
+
+.main-container {
+  display : flex;
+  flex-direction : column;
+  padding : 30px;
+}
+
+.blog-img img {
+  height : 150px;
+  width : 200px;
+  border-radius: 50%;
+}
+
+.blog-img {
+  display : flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Queries Part 3 */
+@media(max-width : 768px){
+  .main-heading {
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom : 20px;
+  }
+  
+  .blog-img img {
+    margin-bottom : 20px;
+  }
+
+  .navbar {
+    z-index : 2;
+  }
+  
+}
+
